@@ -7,16 +7,13 @@ class StringBuilder{
         return this.#value;
     } 
     padStart(str){
-         this.#value = this.#value.padStart(2,str); 
-         return this.#value;
+         this.#value = str+this.#value; 
     }
     padEnd(str){
-          this.#value = this.#value.padEnd(3,str);
-          return this.#value;    
+          this.#value = this.#value+str;    
     }
     padBoth(str){
-        this.#value = this.#value.padStart(4,str).padEnd(5,str);
-       return this.#value;
+        this.#value = str+this.#value+str;
     }
 }
 const builder = new StringBuilder(".");
